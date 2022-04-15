@@ -1,0 +1,93 @@
+GET http://localhost:3002
+
+###
+GET http://localhost:3002/kusama/active_era
+
+###
+GET http://localhost:3002/polkadex/active_era
+
+###
+GET http://localhost:3002/polkadot/active_era
+
+###
+GET http://localhost:3002/polkadex/era_summaries
+
+###
+GET http://localhost:3002/polkadex/era_validators/2743
+
+###
+GET http://localhost:3002/kusama/era_points/2491
+
+###
+GET http://localhost:3002/polkadot/era_rewards/409
+
+###
+GET http://localhost:3002/kusama/all_validators
+
+###
+GET http://localhost:3002/kusama/accounts/Cj2QkhM4ETmfRrcaaKi3B1YZNKAhPTXVVARVnrb6DghebSk
+
+###
+GET http://localhost:3002/kusama/nominators
+
+###
+GET http://localhost:3002/kusama/validator_prefs/2491
+
+
+###
+POST http://localhost:3002/kusama/balances
+content-type: application/json
+
+{
+    "accounts": ["Acount"]
+}
+
+
+###
+POST http://localhost:3002/kusama/unclaimed_eras
+content-type: application/json
+
+{
+    "validators": [
+        "ValidatorA",
+        "ValidatorB"
+    ]
+}
+
+###
+POST http://localhost:3002/kusama/payout
+content-type: application/json
+
+{
+    "treasury": "seed phrase",
+    "validators": [
+        {
+           "validator": "ValidatorA",
+           "era": 2344
+        }
+    ]
+
+}
+
+
+
+###
+POST http://localhost:3002/kusama/kick
+content-type: application/json
+
+{
+    "controller": "seed phrase",
+    "nominators": [
+        "NominatorA",
+        "NominatorB",
+    ]
+}
+
+###
+POST http://localhost:3002/kusama/set_commission
+content-type: application/json
+
+{
+    "controller": "seed phrase",
+    "commission": 1,
+}
