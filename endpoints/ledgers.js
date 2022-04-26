@@ -9,9 +9,9 @@ router.post('/', async (req, res) => {
   let results = []
   stakingInfo.forEach((info) => {
     results.push({
-      stash: info.accountId,
-      controller: info.controllerId,
-      claimed_eras: info.stakingLedger.claimedRewards,
+      stash: info.accountId.toHuman(),
+      controller: info.controllerId.toHuman(),
+      claimed_eras: info.stakingLedger.claimedRewards.toHuman(),
     })
   })
   res.json(results)
