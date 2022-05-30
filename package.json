@@ -11,8 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@polkadot/api": "^8.0.1",
-    "@substrate/api-sidecar": "^9.1.0",
-    "dotenv": "^10.0.0",
+    "@substrate/api-sidecar": "^12.0.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.1"
   }
 }
